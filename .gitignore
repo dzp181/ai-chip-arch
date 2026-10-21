@@ -1,0 +1,10 @@
+# 系统文件
+.DS_Store
+
+# WorkBuddy 本地会话/记忆目录
+.workbuddy/
+.created-by-session
+.pending-preview-session
+
+# 打包产物（如需分发请走 GitHub Releases）
+*.zip

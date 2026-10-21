@@ -1,0 +1,52 @@
+{
+  "name": "ai-chip-arch",
+  "version": "1.0.0",
+  "description": "AI chip architecture expert covering accelerator compute array and dataflow design, memory hierarchy and bandwidth budget, NoC and interconnect, quantization and precision architecture, model-to-hardware co-design, PPA trade-offs, performance modeling and full-stack deployment for training and inference chips.",
+  "author": {
+    "name": "dzp",
+    "email": "dzp181@users.noreply.github.com"
+  },
+  "agents": ["./agents/ai-chip-arch.md"],
+
+  "expertType": "agent",
+  "agentName": "ai-chip-arch",
+
+  "displayName": {
+    "en": "AI Chip Architecture Expert",
+    "zh": "AI 芯片架构专家"
+  },
+  "profession": {
+    "en": "AI Chip Architect",
+    "zh": "AI 芯片架构师"
+  },
+  "displayDescription": {
+    "en": "AI chip architecture expert: compute array and dataflow design, memory hierarchy and bandwidth budget, NoC and interconnect, quantization and precision architecture, model-hardware co-design, PPA trade-offs and inference deployment.",
+    "zh": "AI 芯片架构专家：算力阵列与数据流、存储带宽、互联架构、量化精度、模型硬件协同与 PPA 取舍。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我要做一颗大模型推理芯片，目标 70B 模型 INT4、单请求 TTFT 100ms 以内，请从算力阵列、存储带宽、KV Cache 到互联给我一套架构方案和瓶颈推导。",
+    "en": "I am designing an LLM inference chip targeting a 70B model at INT4 with sub-100ms TTFT per request. Give me an architecture across compute array, memory bandwidth, KV cache and interconnect, with the bottleneck math worked out."
+  },
+  "plugin": "ai-chip-arch",
+  "tags": [
+    { "en": "Compute Array & Dataflow", "zh": "算力阵列与数据流" },
+    { "en": "Memory Hierarchy & Bandwidth", "zh": "存储层次与带宽" },
+    { "en": "Model-Hardware Co-Design", "zh": "模型硬件协同设计" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "I am designing an LLM inference chip targeting a 70B model at INT4 with sub-100ms TTFT per request. Give me an architecture across compute array, memory bandwidth, KV cache and interconnect, with the bottleneck math worked out.",
+      "zh": "我要做一颗大模型推理芯片，目标 70B 模型 INT4、单请求 TTFT 100ms 以内，请从算力阵列、存储带宽、KV Cache 到互联给我一套架构方案和瓶颈推导。"
+    },
+    {
+      "en": "Our INT4 tensor core runs at 200 TOPS but end-to-end throughput is only 18% of peak — help me diagnose whether the bottleneck is memory bandwidth, NoC contention, kernel launch overhead or poor dataflow scheduling.",
+      "zh": "我们的 INT4 张量核算力有 200 TOPS，但端到端吞吐只有峰值的 18%，帮我判断瓶颈是内存带宽、NoC 争抢、kernel 启动开销还是数据流调度不理想。"
+    },
+    {
+      "en": "Compare three architectures for a 7B LLM serving chip: unified tensor core array, dedicated attention engine plus MLP array, and a systolic array with weight stationary. Give me the PPA and throughput trade-offs.",
+      "zh": "对比三种 7B 大模型服务芯片架构：统一张量核阵列、注意力引擎加 MLP 专用阵列、权重静止脉动阵列，给出 PPA 与吞吐的取舍。"
+    }
+  ]
+}
